@@ -16,7 +16,6 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
-        "--filesystem=~/.cache/com.github.lainsce.notejot/saved_notes.json:rw",
         "--talk-name=ca.desrt.dconf",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
