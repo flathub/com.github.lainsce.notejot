@@ -4,8 +4,6 @@
     "runtime-version": "3.26",
     "sdk": "org.gnome.Sdk",
     "command": "com.github.lainsce.notejot",
-    "rename-icon": "com.github.lainsce.notejot",
-    "rename-appdata-file": "com.github.lainsce.notejot.appdata.xml",
     "build-options": {
         "env": {
             "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
@@ -36,12 +34,6 @@
             "config-opts": [
                 "--disable-static"
             ],
-            "build-options": {
-                "env": {
-                    "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
-                    "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
-                }
-            },
             "sources": [
                 {
                     "type":"archive",
@@ -90,7 +82,6 @@
         {
             "name": "notejot",
             "buildsystem": "meson",
-            "builddir": true,
             "sources": [
                 {
                   "type": "archive",
