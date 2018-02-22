@@ -13,15 +13,13 @@
         }
     },
     "cleanup": [
-		"/include",
-		"/lib/pkgconfig",
-		"/share/vala",
-		"/man",
-		"*.a",
-		"*.la",
-        "/bin",
+        "/include",
+        "/lib/pkgconfig",
+        "/share/vala",
+        "/man",
+        "*.a",
+        "*.la",
         "/share/gir-1.0",
-        "/share/applications",
         "/lib/girepository-1.0",
         "/lib/*.la"
 	],
