@@ -12,19 +12,6 @@
             "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
         }
     },
-    "cleanup": [
-		"/include",
-		"/lib/pkgconfig",
-		"/share/vala",
-		"/man",
-		"*.a",
-		"*.la",
-        "/bin",
-        "/share/gir-1.0",
-        "/share/applications",
-        "/lib/girepository-1.0",
-        "/lib/*.la"
-	],
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
@@ -59,6 +46,14 @@
                 "-DCMAKE_INSTALL_LIBDIR=/app/lib"
             ],
             "cleanup": [
+                "/bin",
+                "/include",
+                "/share/vala",
+                "/share/gir-1.0",
+                "/share/applications",
+                "/lib/pkgconfig",
+                "/lib/girepository-1.0",
+                "/lib/*.la"
             ],
             "sources": [
                 {
