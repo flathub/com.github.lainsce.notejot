@@ -21,9 +21,21 @@
         "--filesystem=~/.config/dconf:ro",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/*.la",
+        "/share/gir-1.0",
+        "/lib/girepository-1.0",
+        "/share/vala",
+        "/share/gtk-doc"
+    ],
     "modules": [
         {
             "name": "libgee",
+            "config-opts": [
+                "--disable-static"
+            ],
             "build-options": {
                 "env": {
                     "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
@@ -42,8 +54,7 @@
             "name": "granite",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_LIBDIR=/app/lib"
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "cleanup": [
                 "/bin",
@@ -65,21 +76,14 @@
         },
         {
             "name": "gtksourceview",
+            "config-opts": [
+                "--disable-static"
+            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/gtksourceview/3.22/gtksourceview-3.22.0.tar.xz",
                     "sha256": "70657f48732427984dce6cc812bdd3f2b701c0a49e0a0a08889705b3dadcf8e5"
-                }
-            ]
-        },
-        {
-            "name": "json-glib",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.gnome.org/pub/GNOME/sources/json-glib/1.4/json-glib-1.4.2.tar.xz",
-                    "sha256": "2d7709a44749c7318599a6829322e081915bdc73f5be5045882ed120bb686dc8"
                 }
             ]
         },
