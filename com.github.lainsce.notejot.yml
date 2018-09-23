@@ -1,0 +1,40 @@
+id: com.github.lainsce.notejot
+base: io.elementary.Loki.BaseApp
+base-version: stable
+runtime: org.freedesktop.Platform
+runtime-version: '1.6'
+sdk: org.freedesktop.Sdk
+command: com.github.lainsce.notejot
+finish-args:
+  - '--share=ipc'
+  - '--socket=x11'
+  - '--socket=wayland'
+  - '--talk-name=ca.desrt.dconf'
+  - '--env=DCONF_USER_CONFIG_DIR=.config/dconf'
+  - '--filesystem=xdg-run/dconf'
+  - '--filesystem=~/.config/dconf:ro'
+cleanup:
+  - '/include'
+  - '/lib/pkgconfig'
+  - '/lib/*.la'
+  - '/share/gir-1.0'
+  - '/lib/girepository-1.0'
+  - '/share/vala'
+  - '/share/gtk-doc'
+modules:
+  - name: gtksourceview
+    config-opts:
+    - '--disable-static'
+    sources:
+    - type: archive
+      url: https://download.gnome.org/sources/gtksourceview/3.22/gtksourceview-3.22.0.tar.xz
+      sha256: 70657f48732427984dce6cc812bdd3f2b701c0a49e0a0a08889705b3dadcf8e5
+
+  - name: notejot
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://github.com/lainsce/notejot/archive/1.4.6.tar.gz
+        sha256: d75e157ee7e2d844a2c062a8f6b75e852883c6562d5666eb9bdd7493d5a680af
+      - type: patch
+        path: elementary-theme.patch				 	
