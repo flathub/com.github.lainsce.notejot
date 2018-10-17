@@ -1,10 +1,10 @@
 {
     "app-id": "com.github.lainsce.notejot",
-    "base": "io.elementary.Loki.BaseApp",
-    "base-version": "stable",
+    "base": "io.elementary.BaseApp",
+    "base-version": "juno",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "1.6",
+    "runtime-version": "18.08",
     "command": "com.github.lainsce.notejot",
     "finish-args": [
         "--share=ipc",
@@ -44,8 +44,8 @@
             "sources": [
                 {
                   "type": "archive",
-                  "url": "https://github.com/lainsce/notejot/archive/1.4.6.tar.gz",
-                  "sha256": "d75e157ee7e2d844a2c062a8f6b75e852883c6562d5666eb9bdd7493d5a680af"
+                  "url": "https://github.com/lainsce/notejot/archive/1.4.7.tar.gz",
+                  "sha256": "71b5aac922d01af2b41019000c18d3ef6d15284a8790a77f9f2a79cc340aa325"
                 },
                 {
                     "type": "patch",
