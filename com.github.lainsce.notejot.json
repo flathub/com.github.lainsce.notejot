@@ -1,19 +1,15 @@
 {
     "app-id": "com.github.lainsce.notejot",
     "base": "io.elementary.BaseApp",
-    "base-version": "juno",
+    "base-version": "juno-19.08",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "18.08",
+    "runtime-version": "19.08",
     "command": "com.github.lainsce.notejot",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
-        "--socket=wayland",
-        "--talk-name=ca.desrt.dconf",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--socket=wayland"
     ],
     "cleanup": [
         "/include",
@@ -33,8 +29,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtksourceview/3.22/gtksourceview-3.22.0.tar.xz",
-                    "sha256": "70657f48732427984dce6cc812bdd3f2b701c0a49e0a0a08889705b3dadcf8e5"
+                    "url": "https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz",
+                    "sha256": "691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd"
                 }
             ]
         },
@@ -44,8 +40,8 @@
             "sources": [
                 {
                   "type": "archive",
-                  "url": "https://github.com/lainsce/notejot/archive/1.4.7.tar.gz",
-                  "sha256": "71b5aac922d01af2b41019000c18d3ef6d15284a8790a77f9f2a79cc340aa325"
+                  "url": "https://github.com/lainsce/notejot/archive/1.5.8.tar.gz",
+                  "sha256": "0cb7b4df24b75935fa91ddc5cc4e2073a2697c0ae70f34b2bdf62f2cf784a3d4"
                 },
                 {
                     "type": "patch",
